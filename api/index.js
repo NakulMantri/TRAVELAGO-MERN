@@ -91,8 +91,7 @@ app.post("/register", async (req, res) => {
         });
         await newUser.save();
 
-        // Send registration email
-        await sendRegistrationEmail(name, email);
+
 
         res.json({ success: true, message: "Registration successful" });
     } catch (error) {
